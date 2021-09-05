@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from '../../common.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private common: CommonService) {
+  }
 
   ngOnInit(): void {
+
   }
 
 }

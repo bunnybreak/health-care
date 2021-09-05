@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from '../../common.service';
 
 @Component({
   selector: 'app-doctor-sidebar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorSidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private common:CommonService) { }
 
   ngOnInit(): void {
   }
 
+  logout(){
+    this.common.signOut();
+  }
 }

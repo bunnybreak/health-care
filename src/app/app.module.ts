@@ -22,6 +22,23 @@ import {MemberDashboardComponent} from './dashboard/member-dashboard/member-dash
 import {FamilyMemberDashboardComponent} from './dashboard/family-member-dashboard/family-member-dashboard.component';
 import {AdminDashboardComponent} from './dashboard/admin-dashboard/admin-dashboard.component';
 
+
+/* Add Amplify imports */
+import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
+import Amplify from '@aws-amplify/core';
+import { LoaderComponent } from './loader/loader.component';
+
+/* Configure Amplify resources */
+Amplify.configure({
+    Auth: {
+        mandatorySignIn:true,
+        region: 'us-east-2',
+        userPoolId: 'us-east-2_SepC5KKtT',
+        userPoolWebClientId: '2rhk871mmt3sd7db5j32ql73l8',
+        authenticationFlowType: 'USER_PASSWORD_AUTH'
+    }
+});
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -39,9 +56,11 @@ import {AdminDashboardComponent} from './dashboard/admin-dashboard/admin-dashboa
         ProviderDashboardComponent,
         MemberDashboardComponent,
         FamilyMemberDashboardComponent,
-        AdminDashboardComponent
+        AdminDashboardComponent,
+        LoaderComponent
     ],
     imports: [
+        AmplifyUIAngularModule,
         ReactiveFormsModule,
         BrowserModule,
         HttpClientModule,
