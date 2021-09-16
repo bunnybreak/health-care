@@ -1,26 +1,29 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-light border-0">
   <!-- Left navbar links -->
-  <ul class="navbar-nav">
+  <!--<ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
-    <!-- <li class="nav-item d-none d-sm-inline-block">
+     <li class="nav-item d-none d-sm-inline-block">
       <a routerLink="/dashboard" class="nav-link">Home</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="#" class="nav-link">Contact</a>
-    </li> -->
-  </ul>
+    </li> 
+  </ul>-->
 
   <!-- Right navbar links -->
-
-</nav>
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link" style="color:#000000;"><b>Logout</b></a>
+      </li>
+   </ul>
+  </nav>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: white; ">
   <!-- Brand Logo -->
-  <a routerLink="/dashboard" class="brand-link">
-    <img src="assets/img/logo.png" alt="Healthcare Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">HealthCare</span>
+  <a routerLink="/dashboard" class="brand-link text-center border-0 bg-light" style="font-size: 1.2rem;">
+    <span class="brand-text font-weight-bold text-dark">Mr Santanu G</span>
   </a>
 
   <!-- Sidebar -->
@@ -28,7 +31,7 @@
     <!-- Sidebar user panel (optional) -->
 
 
-    <!-- SidebarSearch Form -->
+    <!-- SidebarSearch Form 
     <div class="form-inline">
       <div class="input-group" data-widget="sidebar-search">
         <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
@@ -39,8 +42,8 @@
         </div>
       </div>
     </div>
-
-    <!-- Sidebar Menu -->
+     Sidebar Menu -->
+    
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
@@ -74,12 +77,9 @@
             </li>
           </ul>
         </li> -->
-        <li class="nav-header text-dark" style=" font-size: 1.2rem; border-bottom: 1px solid;">Dashboard</li>
-        <li class="nav-header text-dark" style=" font-size: 1.2rem; border-bottom: 1px solid;">Create User</li>
-        <li class="nav-header text-dark" style=" font-size: 1.2rem; border-bottom: 1px solid;">User Mannagment</li>
-        <!-- <li class="nav-header text-dark" style=" font-size: 1.2rem; border-bottom: 1px solid;">Family Member</li> -->
-        <!-- <li class="nav-header text-dark" style=" font-size: 1.2rem; border-bottom: 1px solid;">Provider</li> -->
-        <li class="nav-header text-dark" style=" font-size: 1.2rem; border-bottom: 1px solid;" (click)="logout()">Logout</li>
+        <li class="nav-header pb-5"><img src="dist/img/logo.png"  alt="Healthcare Logo" class="brand-image" style="opacity:.8; width: 100%; height: auto;"></li>
+        <li class="nav-header text-dark border-bottom border-secondary" style=" font-size: 1.2rem; ">Create User</li>
+        <li class="nav-header text-dark border-bottom border-secondary" style=" font-size: 1.2rem; ">User Mannagment</li>
 
       </ul>
     </nav>
